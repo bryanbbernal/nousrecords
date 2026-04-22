@@ -156,3 +156,15 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
     h2 { font-size: 1.8rem; }
     .artist-gallery, .espacio-grid, #proyectos .artist-grid ul { grid-template-columns: 1fr; flex-direction: column; }
 }
+/* Estilo para que los links de las listas se vean limpios */
+#proyectos .artist-grid ul li a, 
+.contact-social a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#proyectos .artist-grid ul li a:hover, 
+.contact-social a:hover {
+    color: var(--nous-cyan);
+}
