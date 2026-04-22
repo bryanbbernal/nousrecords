@@ -13,7 +13,15 @@
             <a href="#hero" class="logo-link">
                 <div class="logo">NOUS<span>RÉCORDS</span></div>
             </a>
-            <nav>
+            
+            <button class="menu-toggle" id="menu-open">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="nav-menu">
+                <button class="menu-close" id="menu-close">&times;</button>
                 <ul>
                     <li><a href="#bio">BIO</a></li>
                     <li><a href="#propuesta">PROPUESTA</a></li>
@@ -125,5 +133,26 @@
     <footer>
         <p>NOUS RECORDS © 2026 | BOGOTÁ, COLOMBIA</p>
     </footer>
+
+    <script>
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('#nav-menu ul li a');
+
+        menuOpen.addEventListener('click', () => {
+            navMenu.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
