@@ -22,7 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Forzar que todos los links sean blancos y no morados */
 a, a:visited {
     color: #ffffff;
     text-decoration: none;
@@ -34,7 +33,7 @@ a, a:visited {
     padding: 80px 20px;
 }
 
-/* --- HEADER & NAVEGACIÓN --- */
+/* --- HEADER --- */
 header {
     padding: 20px;
     position: fixed;
@@ -55,7 +54,6 @@ header {
 
 .logo { font-weight: 900; letter-spacing: 2px; font-size: 1.2rem; }
 .logo span { color: var(--nous-cyan); }
-.logo-link { text-decoration: none; color: inherit; }
 
 nav ul { display: flex; list-style: none; }
 nav ul li a {
@@ -115,6 +113,12 @@ h2 span { color: var(--nous-cyan); }
 p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; }
 .dark { background-color: #070707; }
 
+/* Alineación Laboratorio Sonoro en Escritorio */
+.left-align-desktop {
+    text-align: left;
+    margin-left: 0;
+}
+
 /* --- ARTISTAS --- */
 .artist-gallery { display: flex; justify-content: space-between; gap: 30px; margin-top: 40px; text-align: center; }
 .artist-card { flex: 1; }
@@ -138,31 +142,32 @@ p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; 
 .espacio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 .espacio-grid img { width: 100%; border-radius: 4px; }
 
-/* --- CONTACTO (Botones más grandes y espaciados) --- */
+/* --- CONTACTO (Iconos Negro/Blanco) --- */
 .contact-flex { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
 .contact-info i { color: var(--nous-cyan); margin-right: 10px; }
 
 .contact-social-buttons { 
     display: flex; 
-    gap: 25px; /* Más espacio entre botones */
+    gap: 25px; 
 }
 
 .social-btn {
-    width: 65px; /* Botones más grandes */
+    width: 65px; 
     height: 65px;
-    background-color: #ffffff;
-    color: #000000 !important;
+    background-color: #000000; /* Fondo Negro */
+    color: #ffffff !important; /* Icono Blanco */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem; /* Iconos más grandes */
+    font-size: 2rem;
     transition: 0.3s;
 }
 .social-btn:hover { 
-    background-color: var(--nous-cyan); 
+    background-color: #ffffff; 
+    color: #000000 !important;
     transform: translateY(-5px); 
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
 }
 
 /* --- FOOTER --- */
@@ -170,6 +175,13 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
 
 /* --- RESPONSIVE MÓVIL --- */
 @media (max-width: 768px) {
+    .container { text-align: center; } /* Centra títulos y textos en móvil */
+    
+    .left-align-desktop { text-align: center; } /* Laboratorio sonoro se centra en móvil */
+
+    h2 { font-size: 1.8rem; margin: auto; margin-bottom: 20px; }
+    p { margin: auto; margin-bottom: 20px; }
+
     .menu-toggle { display: flex; }
     nav {
         position: fixed;
@@ -190,7 +202,6 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
     .menu-close { display: block; }
     
     h1 { font-size: 16vw; line-height: 1.4; }
-    h2 { font-size: 1.8rem; }
     
     .contact-flex { flex-direction: column; text-align: center; }
     .contact-social-buttons { justify-content: center; flex-wrap: wrap; }
