@@ -24,7 +24,7 @@ body {
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 20px; /* Ajustado ligeramente el padding */
+    padding: 80px 20px;
 }
 
 .logo-link {
@@ -45,7 +45,7 @@ h1 span {
     text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
-/* 1. Estilo para los subtítulos h2 (Blanco + Cian) */
+/* Estilo base para todos los h2: Blanco */
 h2 {
     font-weight: 700;
     font-size: 2.5rem;
@@ -54,11 +54,11 @@ h2 {
     color: #ffffff; /* Color base blanco */
 }
 
+/* Solo si hay un span dentro del h2, se pinta de cian */
 h2 span {
-    color: var(--nous-cyan); /* Segunda parte en cian */
+    color: var(--nous-cyan);
 }
 
-/* 3. Se ocultan las etiquetas de sección (01, 02, etc.) por si quedan restos */
 .section-label {
     display: none;
 }
@@ -127,7 +127,7 @@ nav ul li a:hover {
     color: var(--accent-color);
     font-size: 1rem;
     width: 100%;
-    max-width: 900px; /* Un poco más ancho para el nuevo texto */
+    max-width: 900px;
     margin: 10px auto 0 auto;
 }
 
