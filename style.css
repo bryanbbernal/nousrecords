@@ -32,6 +32,7 @@ body {
     color: inherit;
 }
 
+/* --- Tipografía --- */
 h1 {
     font-weight: 900;
     font-size: 8vw;
@@ -45,22 +46,16 @@ h1 span {
     text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
-/* Estilo base para todos los h2: Blanco */
 h2 {
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
-    color: #ffffff; /* Color base blanco */
+    color: #ffffff;
 }
 
-/* Solo si hay un span dentro del h2, se pinta de cian */
 h2 span {
     color: var(--nous-cyan);
-}
-
-.section-label {
-    display: none;
 }
 
 p {
@@ -70,6 +65,7 @@ p {
     margin-bottom: 20px;
 }
 
+/* --- Header & Nav --- */
 header {
     padding: 30px 20px;
     position: fixed;
@@ -109,6 +105,7 @@ nav ul li a:hover {
     color: var(--nous-cyan);
 }
 
+/* --- Hero Section --- */
 #hero {
     height: 100vh;
     display: flex;
@@ -131,27 +128,66 @@ nav ul li a:hover {
     margin: 10px auto 0 auto;
 }
 
-.dark { background-color: #0a0a0a; }
+/* --- Estilos de Galería (NUEVO) --- */
+.artist-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
 
-.artist-grid ul {
+.artist-card {
+    flex: 1;
+}
+
+.artist-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Las hace cuadradas como en la foto */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.artist-card h3 {
+    color: var(--nous-cyan);
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.artist-card p a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* --- Proyectos (Fuente Bio) --- */
+#proyectos .artist-grid ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-.artist-grid li {
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
+#proyectos .artist-grid li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; /* Igual que el cuerpo de la Bio */
+    font-size: 1.2rem;
+    text-transform: none;
+    border-bottom: 1px solid #222;
+    padding: 10px 0;
     transition: 0.3s;
 }
 
-.artist-grid li:hover {
+#proyectos .artist-grid li:hover {
     color: var(--nous-cyan);
     border-color: var(--nous-cyan);
 }
+
+/* --- Contacto & Otros --- */
+.dark { background-color: #0a0a0a; }
 
 footer {
     padding: 40px;
@@ -164,5 +200,6 @@ footer {
 @media (max-width: 768px) {
     h1 { font-size: 15vw; }
     h2 { font-size: 1.8rem; }
-    .artist-grid ul { grid-template-columns: 1fr; }
+    .artist-gallery { flex-direction: column; }
+    #proyectos .artist-grid ul { grid-template-columns: 1fr; }
 }
