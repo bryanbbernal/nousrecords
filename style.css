@@ -95,7 +95,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 700;
-    margin-left: 20px; /* Reducido un poco para que quepan todos los links */
+    margin-left: 20px;
     transition: 0.3s;
 }
 
@@ -183,7 +183,7 @@ nav ul li a:hover {
     border-color: var(--nous-cyan);
 }
 
-/* --- Estilos Nueva Sección ESPACIO --- */
+/* --- Estilos Sección ESPACIO --- */
 .espacio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -227,5 +227,5 @@ footer {
     .espacio-grid { grid-template-columns: 1fr; }
     #proyectos .artist-grid ul { grid-template-columns: 1fr; }
     .contact-flex { flex-direction: column; gap: 20px; }
-    nav ul { display: none; } /* En móvil el menú requiere JS o un botón, por ahora se oculta */
+    nav ul { display: none; }
 }
