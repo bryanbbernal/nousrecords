@@ -22,6 +22,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Forzar que todos los links sean blancos y no morados */
+a, a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .container {
     max-width: 1100px;
     margin: auto;
@@ -53,8 +59,6 @@ header {
 
 nav ul { display: flex; list-style: none; }
 nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
     font-size: 0.75rem;
     font-weight: 700;
     margin-left: 20px;
@@ -63,7 +67,6 @@ nav ul li a {
 }
 nav ul li a:hover { color: var(--nous-cyan); }
 
-/* Botones menú móvil */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -91,7 +94,7 @@ nav ul li a:hover { color: var(--nous-cyan); }
 h1 {
     font-weight: 900;
     font-size: 8vw;
-    line-height: 1.2; /* Espacio para la tilde */
+    line-height: 1.2;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -117,15 +120,41 @@ p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; 
 .artist-card { flex: 1; }
 .artist-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
 .artist-card h3 { color: var(--nous-cyan); font-size: 1.1rem; margin-bottom: 5px; }
-.artist-card p a { color: white; font-size: 0.9rem; text-decoration: underline; }
+.artist-card p a { font-size: 0.9rem; text-decoration: underline; }
 
-/* --- PROYECTOS --- */
+/* --- PROYECTOS (Corrección Blanco) --- */
 #proyectos .artist-grid ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-#proyectos .artist-grid li { font-weight: 300; border-bottom: 1px solid #222; padding: 10px 0; font-size: 1.1rem; }
+#proyectos .artist-grid li { border-bottom: 1px solid #222; padding: 10px 0; }
+#proyectos .artist-grid li a {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    font-weight: 300;
+    display: block;
+    transition: 0.3s;
+}
+#proyectos .artist-grid li a:hover { color: var(--nous-cyan) !important; padding-left: 10px; }
 
 /* --- ESPACIO --- */
 .espacio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 .espacio-grid img { width: 100%; border-radius: 4px; }
+
+/* --- CONTACTO (Blanco y Negro) --- */
+.contact-flex { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+.contact-info i { color: var(--nous-cyan); margin-right: 10px; }
+.contact-social-buttons { display: flex; gap: 15px; }
+.social-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000 !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.social-btn:hover { background-color: var(--nous-cyan); transform: translateY(-5px); }
 
 /* --- FOOTER --- */
 footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray-muted); }
@@ -133,7 +162,6 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
 /* --- RESPONSIVE MÓVIL --- */
 @media (max-width: 768px) {
     .menu-toggle { display: flex; }
-    
     nav {
         position: fixed;
         top: 0;
@@ -151,20 +179,8 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
     nav ul { flex-direction: column; text-align: center; gap: 30px; }
     nav ul li a { font-size: 1.8rem; margin-left: 0; }
     .menu-close { display: block; }
-
-    h1 { font-size: 16vw; line-height: 1.4; } /* Espacio extra para la tilde de RÉCORDS */
+    h1 { font-size: 16vw; line-height: 1.4; }
     h2 { font-size: 1.8rem; }
-    .artist-gallery, .espacio-grid, #proyectos .artist-grid ul { grid-template-columns: 1fr; flex-direction: column; }
-}
-/* Estilo para que los links de las listas se vean limpios */
-#proyectos .artist-grid ul li a, 
-.contact-social a {
-    color: inherit;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-#proyectos .artist-grid ul li a:hover, 
-.contact-social a:hover {
-    color: var(--nous-cyan);
+    .contact-flex { flex-direction: column; text-align: center; }
+    .artist-gallery, .espacio-grid, #proyectos .artist-grid ul { grid-template-columns: 1fr; }
 }
