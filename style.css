@@ -3,7 +3,6 @@
     --text-color: #ffffff;
     --accent-color: #f2f2f2;
     --gray-muted: #888888;
-    /* Color Cian / Aqua inspirado en un estilo moderno y tecnológico */
     --nous-cyan: #00FFFF; 
 }
 
@@ -11,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,7 +27,11 @@ body {
     padding: 100px 20px;
 }
 
-/* Tipografía Principal */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 h1 {
     font-weight: 900;
     font-size: 8vw;
@@ -36,10 +40,9 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Color CIAN para la palabra RECORDS */
 h1 span {
     color: var(--nous-cyan);
-    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Un ligero brillo sutil */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
 h2 {
@@ -47,6 +50,7 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-transform: uppercase;
+    color: var(--nous-cyan);
 }
 
 .section-label {
@@ -64,7 +68,6 @@ p {
     margin-bottom: 20px;
 }
 
-/* Header & Nav */
 header {
     padding: 30px 20px;
     position: fixed;
@@ -87,42 +90,45 @@ header {
     letter-spacing: 2px;
 }
 
-.logo span { 
-    color: var(--nous-cyan);
-    font-weight: 700; 
-}
+.logo span { color: var(--nous-cyan); font-weight: 700; }
 
 nav ul { display: flex; list-style: none; }
+
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 700;
     margin-left: 30px;
+    transition: 0.3s;
 }
 
-/* Seccion Hero Completamente Centrada */
+nav ul li a:hover {
+    color: var(--nous-cyan);
+}
+
 #hero {
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Alinea h1 y p uno debajo del otro */
-    justify-content: center; 
-    align-items: center;     
-    text-align: center;      
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 20px;
+    width: 100%;
 }
 
 .tagline {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.2em; /* Un poco más de espacio entre letras para estilo EPK */
+    letter-spacing: 0.2em;
     color: var(--accent-color);
     font-size: 1rem;
-    max-width: 90%;
-    margin-top: 10px; /* Separación del título */
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto 0 auto;
 }
 
-/* Estilo de Secciones */
 .dark { background-color: #0a0a0a; }
 
 .artist-grid ul {
@@ -153,7 +159,6 @@ footer {
     border-top: 1px solid #222;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     h1 { font-size: 15vw; }
     h2 { font-size: 1.8rem; }
