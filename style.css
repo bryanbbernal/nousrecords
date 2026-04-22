@@ -95,7 +95,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 700;
-    margin-left: 30px;
+    margin-left: 20px; /* Reducido un poco para que quepan todos los links */
     transition: 0.3s;
 }
 
@@ -125,6 +125,7 @@ nav ul li a:hover {
     margin: 10px auto 0 auto;
 }
 
+/* --- Galería Artistas --- */
 .artist-gallery {
     display: flex;
     justify-content: space-between;
@@ -159,6 +160,7 @@ nav ul li a:hover {
     font-weight: 300;
 }
 
+/* --- Proyectos --- */
 #proyectos .artist-grid ul {
     list-style: none;
     display: grid;
@@ -181,6 +183,27 @@ nav ul li a:hover {
     border-color: var(--nous-cyan);
 }
 
+/* --- Estilos Nueva Sección ESPACIO --- */
+.espacio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.espacio-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: grayscale(30%);
+    transition: 0.5s;
+}
+
+.espacio-grid img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
 .dark { background-color: #0a0a0a; }
 
 .contact-flex {
@@ -201,6 +224,8 @@ footer {
     h1 { font-size: 15vw; }
     h2 { font-size: 1.8rem; }
     .artist-gallery { flex-direction: column; }
+    .espacio-grid { grid-template-columns: 1fr; }
     #proyectos .artist-grid ul { grid-template-columns: 1fr; }
     .contact-flex { flex-direction: column; gap: 20px; }
+    nav ul { display: none; } /* En móvil el menú requiere JS o un botón, por ahora se oculta */
 }
