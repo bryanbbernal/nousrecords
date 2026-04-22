@@ -122,7 +122,7 @@ p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; 
 .artist-card h3 { color: var(--nous-cyan); font-size: 1.1rem; margin-bottom: 5px; }
 .artist-card p a { font-size: 0.9rem; text-decoration: underline; }
 
-/* --- PROYECTOS (Corrección Blanco) --- */
+/* --- PROYECTOS --- */
 #proyectos .artist-grid ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 #proyectos .artist-grid li { border-bottom: 1px solid #222; padding: 10px 0; }
 #proyectos .artist-grid li a {
@@ -138,23 +138,32 @@ p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; 
 .espacio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 .espacio-grid img { width: 100%; border-radius: 4px; }
 
-/* --- CONTACTO (Blanco y Negro) --- */
+/* --- CONTACTO (Botones más grandes y espaciados) --- */
 .contact-flex { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
 .contact-info i { color: var(--nous-cyan); margin-right: 10px; }
-.contact-social-buttons { display: flex; gap: 15px; }
+
+.contact-social-buttons { 
+    display: flex; 
+    gap: 25px; /* Más espacio entre botones */
+}
+
 .social-btn {
-    width: 50px;
-    height: 50px;
+    width: 65px; /* Botones más grandes */
+    height: 65px;
     background-color: #ffffff;
     color: #000000 !important;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Iconos más grandes */
     transition: 0.3s;
 }
-.social-btn:hover { background-color: var(--nous-cyan); transform: translateY(-5px); }
+.social-btn:hover { 
+    background-color: var(--nous-cyan); 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
 
 /* --- FOOTER --- */
 footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray-muted); }
@@ -179,8 +188,12 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
     nav ul { flex-direction: column; text-align: center; gap: 30px; }
     nav ul li a { font-size: 1.8rem; margin-left: 0; }
     .menu-close { display: block; }
+    
     h1 { font-size: 16vw; line-height: 1.4; }
     h2 { font-size: 1.8rem; }
+    
     .contact-flex { flex-direction: column; text-align: center; }
+    .contact-social-buttons { justify-content: center; flex-wrap: wrap; }
+    
     .artist-gallery, .espacio-grid, #proyectos .artist-grid ul { grid-template-columns: 1fr; }
 }
