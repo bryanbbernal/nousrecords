@@ -14,13 +14,9 @@
             <a href="#hero" class="logo-link">
                 <div class="logo">NOUS<span>RÉCORDS</span></div>
             </a>
-            
             <button class="menu-toggle" id="menu-open">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-
             <nav id="nav-menu">
                 <button class="menu-close" id="menu-close">×</button>
                 <ul>
@@ -128,20 +124,11 @@
                     <p><i class="fas fa-envelope"></i> nousrecordscol@gmail.com</p>
                     <p><i class="fas fa-location-dot"></i> Cll 66 #14-85, Bogotá</p>
                 </div>
-                
                 <div class="contact-social-buttons">
-                    <a href="https://wa.me/573505469285" target="_blank" class="social-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/nousrecords" target="_blank" class="social-btn">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@nousrecords" target="_blank" class="social-btn">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@NousRecords" target="_blank" class="social-btn">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                    <a href="https://wa.me/573505469285" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/nousrecords" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@nousrecords" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@NousRecords" target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -157,18 +144,10 @@
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('#nav-menu ul li a');
 
-        menuOpen.addEventListener('click', () => {
-            navMenu.classList.add('active');
-        });
-
-        menuClose.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-
+        menuOpen.addEventListener('click', () => { navMenu.classList.add('active'); });
+        menuClose.addEventListener('click', () => { navMenu.classList.remove('active'); });
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
+            link.addEventListener('click', () => { navMenu.classList.remove('active'); });
         });
     </script>
 </body>
