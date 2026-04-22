@@ -32,7 +32,6 @@ body {
     color: inherit;
 }
 
-/* --- Tipografía --- */
 h1 {
     font-weight: 900;
     font-size: 8vw;
@@ -65,7 +64,6 @@ p {
     margin-bottom: 20px;
 }
 
-/* --- Header & Nav --- */
 header {
     padding: 30px 20px;
     position: fixed;
@@ -105,7 +103,6 @@ nav ul li a:hover {
     color: var(--nous-cyan);
 }
 
-/* --- Hero Section --- */
 #hero {
     height: 100vh;
     display: flex;
@@ -128,7 +125,6 @@ nav ul li a:hover {
     margin: 10px auto 0 auto;
 }
 
-/* --- Estilos de Galería (NUEVO) --- */
 .artist-gallery {
     display: flex;
     justify-content: space-between;
@@ -143,7 +139,7 @@ nav ul li a:hover {
 
 .artist-card img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Las hace cuadradas como en la foto */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 20px;
@@ -163,7 +159,6 @@ nav ul li a:hover {
     font-weight: 300;
 }
 
-/* --- Proyectos (Fuente Bio) --- */
 #proyectos .artist-grid ul {
     list-style: none;
     display: grid;
@@ -173,7 +168,7 @@ nav ul li a:hover {
 
 #proyectos .artist-grid li {
     font-family: 'Inter', sans-serif;
-    font-weight: 300; /* Igual que el cuerpo de la Bio */
+    font-weight: 300;
     font-size: 1.2rem;
     text-transform: none;
     border-bottom: 1px solid #222;
@@ -186,8 +181,13 @@ nav ul li a:hover {
     border-color: var(--nous-cyan);
 }
 
-/* --- Contacto & Otros --- */
 .dark { background-color: #0a0a0a; }
+
+.contact-flex {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
 
 footer {
     padding: 40px;
@@ -202,4 +202,5 @@ footer {
     h2 { font-size: 1.8rem; }
     .artist-gallery { flex-direction: column; }
     #proyectos .artist-grid ul { grid-template-columns: 1fr; }
+    .contact-flex { flex-direction: column; gap: 20px; }
 }
