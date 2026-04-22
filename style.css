@@ -3,8 +3,8 @@
     --text-color: #ffffff;
     --accent-color: #f2f2f2;
     --gray-muted: #888888;
-    /* El azul vibrante del EPK de Nous Records */
-    --nous-blue: #0047FF; 
+    /* Color Cian / Aqua inspirado en un estilo moderno y tecnológico */
+    --nous-cyan: #00FFFF; 
 }
 
 * {
@@ -36,9 +36,10 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Color azul para la palabra RECORDS */
+/* Color CIAN para la palabra RECORDS */
 h1 span {
-    color: var(--nous-blue);
+    color: var(--nous-cyan);
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Un ligero brillo sutil */
 }
 
 h2 {
@@ -87,7 +88,7 @@ header {
 }
 
 .logo span { 
-    color: var(--nous-blue);
+    color: var(--nous-cyan);
     font-weight: 700; 
 }
 
@@ -100,24 +101,28 @@ nav ul li a {
     margin-left: 30px;
 }
 
-/* Seccion Hero Centrada */
+/* Seccion Hero Completamente Centrada */
 #hero {
     height: 100vh;
     display: flex;
-    justify-content: center; /* Centro horizontal */
-    align-items: center;     /* Centro vertical */
-    text-align: center;      /* Centro de texto */
+    flex-direction: column; /* Alinea h1 y p uno debajo del otro */
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
     padding: 20px;
 }
 
 .tagline {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em; /* Un poco más de espacio entre letras para estilo EPK */
     color: var(--accent-color);
+    font-size: 1rem;
+    max-width: 90%;
+    margin-top: 10px; /* Separación del título */
 }
 
-/* Estilo de Secciones y Grillas */
+/* Estilo de Secciones */
 .dark { background-color: #0a0a0a; }
 
 .artist-grid ul {
@@ -136,8 +141,8 @@ nav ul li a {
 }
 
 .artist-grid li:hover {
-    color: var(--nous-blue);
-    border-color: var(--nous-blue);
+    color: var(--nous-cyan);
+    border-color: var(--nous-cyan);
 }
 
 footer {
