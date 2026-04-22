@@ -22,10 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-a, a:visited {
-    color: #ffffff;
-    text-decoration: none; /* Elimina subrayado global */
-}
+a, a:visited { color: #ffffff; text-decoration: none; }
 
 .container {
     max-width: 1100px;
@@ -89,13 +86,7 @@ nav ul li a:hover { color: var(--nous-cyan); }
     padding: 20px;
 }
 
-h1 {
-    font-weight: 900;
-    font-size: 8vw;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
+h1 { font-weight: 900; font-size: 8vw; line-height: 1.2; margin-bottom: 20px; text-transform: uppercase; }
 h1 span { color: var(--nous-cyan); }
 
 .tagline {
@@ -113,36 +104,19 @@ h2 span { color: var(--nous-cyan); }
 p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; }
 .dark { background-color: #070707; }
 
-.left-align-desktop {
-    text-align: left;
-    margin-left: 0;
-}
+.left-align-desktop { text-align: left; margin-left: 0; }
 
-/* --- ARTISTAS (Ajustado para que parezca Proyectos) --- */
+/* --- ARTISTAS --- */
 .artist-gallery { display: flex; justify-content: space-between; gap: 30px; margin-top: 40px; text-align: center; }
 .artist-card { flex: 1; }
 .artist-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
 .artist-card h3 { color: var(--nous-cyan); font-size: 1.1rem; margin-bottom: 5px; }
-
-/* Aquí está el cambio específico para los links de artistas */
-.artist-card p a { 
-    font-size: 1.1rem; 
-    font-weight: 300; 
-    text-decoration: none; /* Sin subrayado */
-    color: #ffffff !important;
-}
-.artist-card p a:hover { color: var(--nous-cyan) !important; }
+.artist-card p a { font-size: 1.1rem; font-weight: 300; color: #ffffff !important; }
 
 /* --- PROYECTOS --- */
 #proyectos .artist-grid ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 #proyectos .artist-grid li { border-bottom: 1px solid #222; padding: 10px 0; }
-#proyectos .artist-grid li a {
-    color: #ffffff !important;
-    font-size: 1.1rem;
-    font-weight: 300;
-    display: block;
-    transition: 0.3s;
-}
+#proyectos .artist-grid li a { color: #ffffff !important; font-size: 1.1rem; font-weight: 300; display: block; transition: 0.3s; }
 #proyectos .artist-grid li a:hover { color: var(--nous-cyan) !important; padding-left: 10px; }
 
 /* --- ESPACIO --- */
@@ -150,20 +124,22 @@ p { font-size: 1.1rem; font-weight: 300; max-width: 700px; margin-bottom: 20px; 
 .espacio-grid img { width: 100%; border-radius: 4px; }
 
 /* --- CONTACTO --- */
-.contact-flex { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
-.contact-info i { color: var(--nous-cyan); margin-right: 10px; }
-.contact-social-buttons { display: flex; gap: 25px; }
+.contact-flex { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+.director-block { margin-bottom: 30px; text-align: left; }
+.director-block p { margin-bottom: 15px; line-height: 1.6; }
+.director-block strong { color: var(--nous-cyan); font-weight: 700; }
+.general-contact { font-size: 1rem; margin-bottom: 10px !important; }
+.general-contact i { color: var(--nous-cyan); margin-right: 10px; }
 
+.contact-social-buttons { display: flex; gap: 25px; }
 .social-btn {
     width: 65px; height: 65px;
     background-color: #000000;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    display: flex;
-    justify-content: center; align-items: center;
-    font-size: 2rem;
-    transition: 0.3s;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 2rem; transition: 0.3s;
 }
 .social-btn:hover { background-color: #ffffff; color: #000000 !important; transform: translateY(-5px); }
 
@@ -176,6 +152,11 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
     .left-align-desktop { text-align: center; }
     h2 { font-size: 1.8rem; margin: auto; margin-bottom: 20px; }
     p { margin: auto; margin-bottom: 20px; }
+    
+    /* ARTISTAS EN MÓVIL: Una debajo de la otra y foto grande */
+    .artist-gallery { flex-direction: column; align-items: center; gap: 50px; }
+    .artist-card { width: 100%; max-width: 400px; }
+
     .menu-toggle { display: flex; }
     nav {
         position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
@@ -186,8 +167,12 @@ footer { padding: 40px; text-align: center; font-size: 0.7rem; color: var(--gray
     nav ul { flex-direction: column; text-align: center; gap: 30px; }
     nav ul li a { font-size: 1.8rem; margin-left: 0; }
     .menu-close { display: block; }
+    
     h1 { font-size: 16vw; line-height: 1.4; }
-    .contact-flex { flex-direction: column; text-align: center; }
+    
+    .contact-flex { flex-direction: column; text-align: center; align-items: center; }
+    .director-block { text-align: center; }
     .contact-social-buttons { justify-content: center; flex-wrap: wrap; }
-    .artist-gallery, .espacio-grid, #proyectos .artist-grid ul { grid-template-columns: 1fr; }
+    
+    .espacio-grid, #proyectos .artist-grid ul { grid-template-columns: 1fr; }
 }
